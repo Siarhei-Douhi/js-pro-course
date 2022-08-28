@@ -1,5 +1,18 @@
 .wrap {
-  width: 500px;
+  width: 300px;
   border: 2px solid;
   margin: 0 auto;
+}
+.wrapBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 210px;
+  margin: 0 auto;
+}
+.btnMinus {
+  position: relative;
+  left: 0;
+  top: 70px;
 }
