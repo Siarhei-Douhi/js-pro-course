@@ -1,7 +1,7 @@
 .wrap {
   width: 300px;
   border: 2px solid;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 .wrapBtn {
   display: flex;
