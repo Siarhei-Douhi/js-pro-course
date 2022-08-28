@@ -1,19 +1,27 @@
-import style from './style.module.css'
+import style from "./style.module.css";
 
 interface Props {
-    userName: string;
-
+  userName: string;
+  isDark: boolean;
 }
 
 export const UserCard = (props: Props) => {
+  const arrayFullName = props.userName.split(" ");
 
-    const arrayFullName = props.userName.split(' ');
-    const  firstLastName = arrayFullName[0][0].concat(arrayFullName[1][0]);
-
-    return ( 
-        <div className={style.conteiner}>
-            <div className={style.userInicial}>{firstLastName}</div>
-            <div className={style.user}>{props.userName}</div>
-        </div>
-    )
-}
+  return (
+    <div
+      className={`${style.container} ${
+        props.isDark ? style.containerDark : ""
+      }`}
+    >
+      <div
+        className={`${style.userInicial} ${
+          props.isDark ? style.userInicialDark : ""
+        }`}
+      >{`${arrayFullName[0][0]}${
+        arrayFullName[1] ? arrayFullName[1][0] : ""
+      }`}</div>
+      <div className={style.user}>{props.userName}</div>
+    </div>
+  );
+};

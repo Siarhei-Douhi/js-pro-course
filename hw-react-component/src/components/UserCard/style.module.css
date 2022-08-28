@@ -1,28 +1,33 @@
-.conteiner {
-    width: 250px;
-    height: 90px;
-    background-color: rgb(44, 10, 214);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 10px;
-    font-size: 25px;
-    color: white;
-    margin: 0 auto 20px;
-
+.container {
+  width: 250px;
+  height: 90px;
+  background-color: rgb(44, 10, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  font-size: 25px;
+  color: white;
+  margin: 0 auto 20px;
+}
+.containerDark {
+  background-color: black;
 }
 
 .userInicial {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(68, 162, 245, 0.897);
-    text-transform: uppercase;
-    font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(68, 162, 245, 0.897);
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.user{
-    text-transform: capitalize;
+.userInicialDark {
+  background-color: grey;
+}
+.user {
+  text-transform: capitalize;
 }
