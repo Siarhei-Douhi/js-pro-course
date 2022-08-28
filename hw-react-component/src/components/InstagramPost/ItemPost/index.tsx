@@ -1,4 +1,5 @@
 import style from "./style.module.css";
+import im from "./Rectangle.png";
 
 interface Props {
   id?: number;
@@ -17,13 +18,7 @@ export const ItemPost = (props: Props) => {
       {props.image ? (
         <img className={style.image} src={props.image} alt="пост" />
       ) : (
-        <img
-          className={style.image}
-          src={
-            "https://avatarko.ru/img/kartinka/18/multfilm_kotenok_snezhinka_17593.jpg"
-          }
-          alt="пост"
-        />
+        <img className={style.image} src={im} alt="пост" />
       )}
       <h2>{props.title}</h2>
       <p>{props.text}</p>

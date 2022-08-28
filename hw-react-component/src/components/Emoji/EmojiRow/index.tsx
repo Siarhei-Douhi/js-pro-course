@@ -1,8 +1,14 @@
+import style from "./style.module.css";
 interface Props {
   title: string;
-  symbol: Symbol;
+  symbol: string;
 }
 
 export const EmojiRow = (props: Props) => {
-  return <div>{`${props.symbol}`}</div>;
+  return (
+    <div className={style.wrapper}>
+      {props.symbol}
+      {props.title}
+    </div>
+  );
 };

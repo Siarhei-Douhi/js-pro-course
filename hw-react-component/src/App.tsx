@@ -6,7 +6,7 @@ import { Title } from "./components/Title";
 import { Clicker } from "./components/Clicker";
 import { ItemPost } from "./components/InstagramPost/ItemPost";
 import { ListPost } from "./components/InstagramPost/ListPosts";
-import { EmojiRow } from "./components/Emoji/EmojiRow";
+import { EmojiList } from "./components/Emoji/EmojiList";
 
 function App() {
   const onClickBtn1 = () => {
@@ -50,6 +50,7 @@ function App() {
         />
       </div>
       <ListPost />
+      <EmojiList />
     </div>
   );
 }
