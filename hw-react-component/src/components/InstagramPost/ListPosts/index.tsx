@@ -11,6 +11,7 @@ const todos = [
     author: "Ivanov",
     title: "What is Lorem Ipsum?",
     date: "28.08.2022",
+    image: "https://avatarko.ru/img/kartinka/3/zhivotnye_medved_lampa_2384.jpg",
   },
   {
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -18,6 +19,7 @@ const todos = [
     author: "Stilov",
     title: "What is Lorem Ipsum?",
     date: "28.08.2022",
+    image: "https://avatarko.ru/img/kartinka/9/robot_medved_8715.jpg",
   },
   {
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  book.",
@@ -32,6 +34,7 @@ const todos = [
     author: "Malahov",
     title: "What is Lorem Ipsum?",
     date: "28.08.2022",
+    image: "https://avatarko.ru/img/kartinka/2/multfilm_robot_1481.jpg",
   },
 ];
 
@@ -46,6 +49,7 @@ export const ListPost = () => {
             author={item.author}
             title={item.title}
             date={item.date}
+            image={item.image}
           />
         );
       })}

@@ -29,13 +29,14 @@ function App() {
       <Clicker />
       <div style={{ display: "flex ", marginBottom: "30px" }}>
         <ItemPost
-          image="./components/InstagramPost/img/Rectangle.png"
+          image="https://avatarko.ru/img/kartinka/9/robot_medved_8715.jpg"
           author="Petrov"
           text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
           title="What is Lorem Ipsum?"
           date={"28.08.2022"}
         />
         <ItemPost
+          image="https://avatarko.ru/img/kartinka/2/multfilm_robot_1481.jpg"
           author="Ivanov"
           text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
           title="What is Lorem Ipsum?"

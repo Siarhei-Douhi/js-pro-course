@@ -15,15 +15,14 @@ export const ItemPost = (props: Props) => {
     <div className={style.container}>
       <div>{props.author}</div>
       {props.image ? (
-        <div
-          className={style.image}
-          style={{ backgroundImage: `url(${props.image})` }}
-        />
+        <img className={style.image} src={props.image} alt="пост" />
       ) : (
-        // <img className={style.image} src={"../img/Vector.jpg"} alt="пост" />
-        <div
+        <img
           className={style.image}
-          style={{ backgroundImage: `url("../img/Vector.png")` }}
+          src={
+            "https://avatarko.ru/img/kartinka/18/multfilm_kotenok_snezhinka_17593.jpg"
+          }
+          alt="пост"
         />
       )}
       <h2>{props.title}</h2>
@@ -32,11 +31,3 @@ export const ItemPost = (props: Props) => {
     </div>
   );
 };
-
-//   "id": 0,
-// "image": "string",
-// "text": "string",
-// "date": "2022-08-28",
-// "lesson_num": 0,
-// "title": "string",
-// "author": 0
