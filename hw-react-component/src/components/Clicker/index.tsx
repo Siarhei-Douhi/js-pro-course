@@ -19,9 +19,23 @@ export const Clicker = () => {
     <div className={style.wrap}>
       <p>Counter</p>
       <h2>{clickCount}</h2>
-      <Button text={"+"} onClick={onClickPlus} type="primary" />
-      <Button text={"-"} onClick={onClickMinus} type="primary" />
-      <Button text={"reset"} onClick={reset} type="secondary" />
+      <div className={style.wrapBtn}>
+        {clickCount <= 0 && (
+          <Button text={"+"} onClick={onClickPlus} type="primary" />
+        )}
+        {clickCount >= 10 && (
+          <div className={style.btnMinus}>
+            <Button text={"-"} onClick={onClickMinus} type="primary" />
+          </div>
+        )}
+        {!(clickCount >= 10) && !(clickCount <= 0) && (
+          <div>
+            <Button text={"+"} onClick={onClickPlus} type="primary" />
+            <Button text={"-"} onClick={onClickMinus} type="primary" />
+          </div>
+        )}
+        <Button text={"reset"} onClick={reset} type="secondary" />
+      </div>
     </div>
   );
 };
