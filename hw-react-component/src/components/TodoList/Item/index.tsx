@@ -1,3 +1,4 @@
+import style from "./style.module.css";
 import { useEffect, useState } from "react";
 import { Button } from "../../Button";
 
@@ -29,7 +30,7 @@ export const Item = (props: IProps) => {
   }, [count]);
 
   return (
-    <div style={{ border: "1px solid black", marginBottom: "10px" }}>
+    <div className={style.todoItem}>
       <input
         type={"checkbox"}
         checked={props.checked}

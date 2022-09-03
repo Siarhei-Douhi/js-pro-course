@@ -1,9 +1,10 @@
+import style from "./style.module.css";
 import { ChangeEventHandler, useCallback, useState } from "react";
 import { Button } from "../../Button";
 import { Input } from "../../Input";
 import { Item } from "../Item";
 
-const generateUniqId = () => {
+export const generateUniqId = () => {
   return "_" + Math.random().toString(16).slice(2);
 };
 
@@ -81,8 +82,8 @@ export const TodoList = () => {
   };
 
   return (
-    <div>
-      <div style={{ display: "flex" }}>
+    <div className={style.container}>
+      <div className={style.wrapper}>
         <Input value={text} onChange={handleOnChange} />
         {text.length > 5 ? (
           <Button

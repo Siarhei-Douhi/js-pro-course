@@ -1,0 +1,10 @@
+.container {
+  width: 500px;
+  margin: 0 auto 30px;
+}
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  border: 2px solid;
+  padding: 20px;
+}

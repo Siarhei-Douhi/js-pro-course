@@ -6,7 +6,7 @@ import { Title } from "./components/Title";
 import { Clicker } from "./components/Clicker";
 import { ListPost } from "./components/InstagramPost/ListPosts";
 import { EmojiList } from "./components/Emoji/EmojiList";
-import { posts } from "./mock";
+import { emojies, posts } from "./mock";
 import { TodoList } from "./components/TodoList/List";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       <Clicker />
       <ListPost posts={posts} />
       <TodoList />
-      <EmojiList />
+      <EmojiList emojies={emojies} />
     </div>
   );
 }

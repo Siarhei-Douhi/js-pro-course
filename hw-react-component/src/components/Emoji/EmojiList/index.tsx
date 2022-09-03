@@ -1,18 +1,43 @@
+import style from "./style.module.css";
 import { EmojiRow } from "../EmojiRow";
-import { emojies } from "./list";
+import { ChangeEventHandler, useState } from "react";
+import { Input } from "../../Input";
 
-export const EmojiList = () => {
+interface IEmoji {
+  symbol: string;
+  title: string;
+  keywords: string;
+}
+
+interface IProps {
+  emojies: IEmoji[];
+}
+
+export const EmojiList = ({ emojies }: IProps) => {
+  const [searchText, setSearchText] = useState("");
+  const handleOnChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    setSearchText(event.target.value);
+  };
+
+  const searchEmodjies = emojies.filter((item) => {
+    if (
+      item.title.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()) ||
+      item.keywords.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+    ) {
+      return true;
+    }
+    return false;
+  });
+
   return (
-    <div>
-      <h2>Задание 3</h2>
-      {emojies.map((item) => {
-        return (
-          <EmojiRow
-            key={item.keywords}
-            symbol={item.symbol}
-            title={item.title}
-          />
-        );
+    <div className={style.wrap}>
+      <Input
+        value={searchText}
+        onChange={handleOnChange}
+        placeholder={"search emodjies"}
+      />
+      {searchEmodjies.map((item, index) => {
+        return <EmojiRow key={index} symbol={item.symbol} title={item.title} />;
       })}
     </div>
   );

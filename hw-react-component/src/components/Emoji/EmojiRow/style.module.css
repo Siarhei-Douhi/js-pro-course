@@ -1,5 +1,6 @@
-.wrapper {
-  border: 1px solid;
+.emojiRow {
+  border: 2px dotted green;
   padding: 5px;
   width: 200px;
+  list-style-type: none;
 }
