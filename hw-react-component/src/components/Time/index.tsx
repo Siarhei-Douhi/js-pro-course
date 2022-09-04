@@ -12,18 +12,17 @@ export const Time = () => {
     return `${hours}:${minutes}:${seconds}`;
   };
 
-  let [count, setCount] = useState(clock());
+  let [count, setCount] = useState("");
 
-  count = clock();
+  // count = clock();
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    setInterval(() => {
       setCount(clock);
     }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-      // clock();
-    };
   }, []);
+  // setInterval(() => {
+  //   setCount(clock);
+  // }, 1000);
+
   return <div className={style.clock}>{count}</div>;
 };

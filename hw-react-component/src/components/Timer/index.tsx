@@ -11,8 +11,8 @@ export const Timer = () => {
     }, 1000);
   };
   const stop = () => {
-    setCount((state) => state);
-    return clearInterval(intervalId);
+    setCount(count);
+    clearInterval(intervalId);
   };
   const reset = () => {
     setCount(0);
