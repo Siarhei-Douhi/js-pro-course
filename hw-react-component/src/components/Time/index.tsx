@@ -14,7 +14,6 @@ export const Time = () => {
 
   let [count, setCount] = useState("");
 
-  // count = clock();
   useEffect(() => {
     setInterval(() => {
       setCount(clock);
