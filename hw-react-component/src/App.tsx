@@ -8,6 +8,9 @@ import { ListPost } from "./components/InstagramPost/ListPosts";
 import { EmojiList } from "./components/Emoji/EmojiList";
 import { emojies, posts } from "./mock";
 import { TodoList } from "./components/TodoList/List";
+import { Time } from "./components/Time";
+import { Timer } from "./components/Timer";
+import { Form } from "./components/Form";
 
 function App() {
   const onClickBtn1 = () => {
@@ -23,7 +26,7 @@ function App() {
         <Button text="click me" onClick={onClickBtn1} type="primary" />
         <Button text="and me" onClick={onClickBtn2} type="secondary" />
       </div>
-      <Input value="some text" onChange={() => {}} />
+      <Input value="some text" onChange={() => {}} label={"test"} />
       <Input value="text2" onChange={() => {}} />
       <UserCard userName="Artem Malkin" isDark={false} />
       <UserCard userName="Ivanov" isDark={true} />
@@ -31,6 +34,9 @@ function App() {
       <ListPost posts={posts} />
       <TodoList />
       <EmojiList emojies={emojies} />
+      <Time />
+      <Timer />
+      <Form />
     </div>
   );
 }
