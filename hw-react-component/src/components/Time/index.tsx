@@ -19,9 +19,6 @@ export const Time = () => {
       setCount(clock);
     }, 1000);
   }, []);
-  // setInterval(() => {
-  //   setCount(clock);
-  // }, 1000);
 
   return <div className={style.clock}>{count}</div>;
 };

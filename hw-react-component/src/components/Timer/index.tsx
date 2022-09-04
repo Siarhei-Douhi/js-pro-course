@@ -1,26 +1,29 @@
 import { useEffect, useState } from "react";
 import { Button } from "../Button";
-
+import style from "./style.module.css";
 export const Timer = () => {
   let [count, setCount] = useState(0);
   let intervalId: any;
   const start = () => {
-    intervalId = setInterval(() => {
-      console.log("setInterval");
-      setCount((state) => state + 1);
-    }, 1000);
+    setCount((count += 1));
   };
+  useEffect(() => {
+    if (count > 0) {
+      intervalId = setInterval(() => {
+        setCount(count + 1);
+      }, 1000);
+    }
+    return () => clearInterval(intervalId);
+  });
   const stop = () => {
-    setCount(count);
     clearInterval(intervalId);
   };
   const reset = () => {
     setCount(0);
-    clearInterval(intervalId);
   };
 
   return (
-    <div>
+    <div className={style.timer}>
       {count}
       <div>
         <Button text={"start"} onClick={start} type={"primary"} />

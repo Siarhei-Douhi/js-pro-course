@@ -11,6 +11,7 @@ import { TodoList } from "./components/TodoList/List";
 import { Time } from "./components/Time";
 import { Timer } from "./components/Timer";
 import { Form } from "./components/Form";
+import { Converter } from "./components/Converter";
 
 function App() {
   const onClickBtn1 = () => {
@@ -37,6 +38,7 @@ function App() {
       <Time />
       <Timer />
       <Form />
+      <Converter />
     </div>
   );
 }
