@@ -15,9 +15,12 @@ export const Time = () => {
   let [count, setCount] = useState("");
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setCount(clock);
     }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return <div className={style.clock}>{count}</div>;

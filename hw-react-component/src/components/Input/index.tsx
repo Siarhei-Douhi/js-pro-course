@@ -3,7 +3,7 @@ import { ChangeEventHandler } from "react";
 
 interface Input {
   label?: string;
-  value: string | number;
+  value: string;
   placeholder?: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
 }

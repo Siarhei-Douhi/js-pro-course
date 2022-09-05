@@ -8,16 +8,12 @@ export const Converter = () => {
 
   const handleDollar: ChangeEventHandler<HTMLInputElement> = (event) => {
     setDol(event.target.value);
-
-    // byn = dol + "a";
-    setByn((state) => (state = dol + "b"));
+    setByn((Number(event.target.value) * 2.57).toString());
   };
-
-  useEffect(() => {}, [dol]);
 
   const handleByn: ChangeEventHandler<HTMLInputElement> = (event) => {
     setByn(event.target.value);
-    // dol = byn + "b";
+    setDol((Number(event.target.value) / 2.57).toString());
   };
   return (
     <div>

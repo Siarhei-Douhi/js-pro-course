@@ -10,7 +10,7 @@ import { emojies, posts } from "./mock";
 import { TodoList } from "./components/TodoList/List";
 import { Time } from "./components/Time";
 import { Timer } from "./components/Timer";
-import { Form } from "./components/Form";
+import { RegisterForm } from "./components/RegisterForm";
 import { Converter } from "./components/Converter";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
       <EmojiList emojies={emojies} />
       <Time />
       <Timer />
-      <Form />
+      <RegisterForm />
       <Converter />
     </div>
   );

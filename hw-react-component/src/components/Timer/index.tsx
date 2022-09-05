@@ -14,7 +14,7 @@ export const Timer = () => {
       }, 1000);
     }
     return () => clearInterval(intervalId);
-  });
+  }, [count]);
   const stop = () => {
     clearInterval(intervalId);
   };

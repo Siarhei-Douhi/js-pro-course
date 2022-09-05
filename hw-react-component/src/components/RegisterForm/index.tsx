@@ -3,7 +3,7 @@ import { ChangeEventHandler, useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
-export const Form = () => {
+export const RegisterForm = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
