@@ -28,7 +28,7 @@ export const RegisterForm = () => {
     setPassword("");
     setConfirm("");
   };
-
+  const login = <a href="#">login</a>;
   return (
     <div className={style.form}>
       <Input value={user} label="User Name" onChange={handleUser} />
@@ -40,7 +40,10 @@ export const RegisterForm = () => {
         onChange={handleConfirm}
       />
       <Button text="Login" onClick={onclickLogin} type={"primary"} />
-      <p>{"If you have account, you can login0"}</p>
+      <p>
+        {`If you have account, you can `}
+        {login}
+      </p>
     </div>
   );
 };

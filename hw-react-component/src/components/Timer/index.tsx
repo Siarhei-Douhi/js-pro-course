@@ -1,34 +1,51 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../Button";
 import style from "./style.module.css";
+
 export const Timer = () => {
-  let [count, setCount] = useState(0);
-  let intervalId: any;
-  const start = () => {
-    setCount((count += 1));
-  };
+  const [count, setCount] = useState(0);
+  const timerRef = useRef<NodeJS.Timer | null>(null);
+
   useEffect(() => {
-    if (count > 0) {
-      intervalId = setInterval(() => {
-        setCount(count + 1);
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, []);
+
+  const onClickStart = () => {
+    if (!timerRef.current) {
+      console.log(timerRef.current);
+      timerRef.current = setInterval(() => {
+        setCount((state) => state + 1);
       }, 1000);
+      console.log(timerRef.current);
     }
-    return () => clearInterval(intervalId);
-  }, [count]);
-  const stop = () => {
-    clearInterval(intervalId);
   };
-  const reset = () => {
+
+  const onClickStop = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = null;
+  };
+
+  const onClickReset = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    timerRef.current = null;
     setCount(0);
   };
 
   return (
     <div className={style.timer}>
-      {count}
+      <h3>{count}</h3>
       <div>
-        <Button text={"start"} onClick={start} type={"primary"} />
-        <Button text={"stop"} onClick={stop} type={"primary"} />
-        <Button text={"reset"} onClick={reset} type={"primary"} />
+        <Button type="primary" text={"start"} onClick={onClickStart} />
+        <Button type="primary" text={"stop"} onClick={onClickStop} />
+        <Button type="primary" text={"reset"} onClick={onClickReset} />
       </div>
     </div>
   );
