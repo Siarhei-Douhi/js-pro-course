@@ -10,7 +10,7 @@ interface Input {
 export const Input = (props: Input) => {
   return (
     <label>
-      {props.label ? <p>{props.label}</p> : null}
+      {props.label ? <p className={styles.labelTitle}>{props.label}</p> : null}
       <input
         className={styles.input}
         value={props.value}
