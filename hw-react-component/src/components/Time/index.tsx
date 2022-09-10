@@ -12,7 +12,7 @@ export const Time = () => {
     return `${hours}:${minutes}:${seconds}`;
   };
 
-  let [count, setCount] = useState("");
+  let [count, setCount] = useState(clock());
 
   useEffect(() => {
     const interval = setInterval(() => {
