@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import { ChangeEventHandler, useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
+import { TextForm } from "../TextForm";
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -31,10 +32,10 @@ export const LoginForm = () => {
       <div className={style.formBtn}>
         <Button text="Login" onClick={onclickLogin} type={"primary"} />
       </div>
-      <p className={style.formTextUnderBtn}>
-        {`Forgot your password? `}
+      <span className={style.textWrap}>
+        <TextForm text={"Forgot your password? "} />
         {passwordReset}
-      </p>
+      </span>
     </div>
   );
 };

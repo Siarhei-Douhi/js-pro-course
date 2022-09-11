@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { Context } from "../../App";
 import styles from "./style.module.css";
 
 interface Props {
@@ -25,9 +27,12 @@ const getButtonStyle = (type: "primary" | "secondary" | "secondary2") => {
   }
 };
 export const Button = (props: Props) => {
+  const { isDark } = useContext(Context);
   return (
     <button
-      className={`${styles.button} ${getButtonStyle(props.type)}`}
+      className={`${styles.button} ${getButtonStyle(props.type)} ${
+        isDark ? styles.buttonDark : ""
+      }`}
       onClick={props.onClick}
       disabled={props.disabled}
     >

@@ -10,18 +10,15 @@
 .formBtn {
   margin-top: 23px;
 }
-.formTextUnderBtn {
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 34px;
-  text-align: left;
-  letter-spacing: 0.03em;
-  color: #254050;
-}
 .login {
   font-weight: 700;
   font-size: 25px;
   line-height: 34px;
   letter-spacing: 0.03em;
   color: #016efc;
+}
+.textWrap {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 370px;
 }

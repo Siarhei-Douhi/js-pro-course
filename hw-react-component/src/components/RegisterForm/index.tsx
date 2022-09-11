@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import { ChangeEventHandler, useState } from "react";
 import { Button } from "../Button";
 import { Input } from "../Input";
+import { TextForm } from "../TextForm";
 
 export const RegisterForm = () => {
   const [user, setUser] = useState("");
@@ -46,10 +47,10 @@ export const RegisterForm = () => {
       <div className={style.formBtn}>
         <Button text="Login" onClick={onclickLogin} type={"primary"} />
       </div>
-      <p className={style.formTextUnderBtn}>
-        {`If you have account, you can `}
+      <span className={style.textWrap}>
+        <TextForm text={`If you have account, you can `} />
         {login}
-      </p>
+      </span>
     </div>
   );
 };

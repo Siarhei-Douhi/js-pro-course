@@ -13,6 +13,9 @@
   color: #016efc;
   margin-bottom: 76px;
 }
+.titleDark {
+  color: white;
+}
 .text {
   margin: 0 auto 73px;
   width: 580px;
@@ -23,4 +26,7 @@
   line-height: 34px;
   letter-spacing: 0.03em;
   color: #254050;
+}
+.textDark {
+  color: gray;
 }
