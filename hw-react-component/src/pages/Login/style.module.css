@@ -1,0 +1,32 @@
+.container {
+  background: #fff;
+  height: 100vh;
+}
+
+.darkContainer {
+  background: #000;
+  height: 100vh;
+}
+.wrapperLink {
+  margin-bottom: 95px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #75869b;
+  text-align: center;
+}
+.active_link {
+  color: #016efc;
+}
+.noActive_link {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #75869b;
+}

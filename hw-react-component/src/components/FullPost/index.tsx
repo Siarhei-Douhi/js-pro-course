@@ -1,8 +1,8 @@
 import style from "./style.module.css";
-import { picture } from "../../../assets";
-import { IPost } from "../../../types/post";
+import { picture } from "../../assets";
+import { IPost } from "../../types/post";
 
-export const ItemPost = (props: IPost) => {
+export const FullPost = (props: IPost) => {
   return (
     <div className={style.container}>
       {props.image ? (

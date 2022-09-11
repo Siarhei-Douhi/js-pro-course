@@ -1,26 +1,28 @@
 .container {
   box-sizing: border-box;
-  /* margin: 0 auto; */
-  text-align: left;
-  padding: 28px 21px 22px 24px;
-  width: 341px;
-  background: #ffffff;
-  box-shadow: 0px 6px 50px rgba(184, 196, 209, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 19px 37.5px 50px 23px;
+  width: 675px;
+  height: 604px;
+  background: #fdfdff;
+  border: 1px solid #ebebeb;
   border-radius: 13px;
 }
 .imagePost {
-  width: 296px;
-  height: 120px;
+  width: 614.2px;
+  height: 249px;
   border: 1px solid #ebebeb;
   border-radius: 11px;
 }
 .cardTitle {
-  font-family: "Raleway";
+  font-family: "Alata";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
-  line-height: 23px;
-  display: flex;
+  line-height: 28px;
   color: #4f4f4f;
 }
 .cardText {
@@ -29,14 +31,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  display: flex;
   color: #979797;
 }
 .date {
-  font-family: "Raleway";
+  font-family: "Alata";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 22px;
   color: #016efc;
 }

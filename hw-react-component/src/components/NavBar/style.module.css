@@ -5,6 +5,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.navBarDark {
+  background-color: grey;
+}
 
 .mainMenu {
   width: 100%;
@@ -46,10 +49,15 @@
   font-size: 25px;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: white;
   text-decoration: none;
 }
 
 a.activeLink {
   text-decoration: underline;
+}
+.active_link {
+  color: chartreuse;
+}
+.noActive_link {
+  color: white;
 }

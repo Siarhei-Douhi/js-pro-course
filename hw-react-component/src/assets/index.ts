@@ -1,2 +1,4 @@
 import picture from "./images/Rectangle.png";
-export { picture };
+import menu from "./images/menu.svg";
+import close from "./images/close.svg";
+export { picture, menu, close };
