@@ -5,7 +5,7 @@ import style from "./style.module.css";
 
 export const Main = () => {
   return (
-    <Container>
+    <Container className={style.container}>
       <Header />
       <div className={style.wrap}>
         <AllPosts />

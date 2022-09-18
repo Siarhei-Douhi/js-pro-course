@@ -63,7 +63,9 @@ export const AllPosts = () => {
       </div>
       <ListPost posts={posts} onClickPost={navigateToPost} />
       {showLoadMore ? (
-        <Button text="Загрузить еще" onClick={loadMore} type="primary" />
+        <div className={style.buttonWrapper}>
+          <Button text="Загрузить еще" onClick={loadMore} type="primary" />
+        </div>
       ) : null}
     </>
   );
