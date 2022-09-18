@@ -4,52 +4,37 @@ import { Button } from "../Button";
 import { Input } from "../Input";
 import { TextForm } from "../TextForm";
 
-export const RegisterForm = () => {
-  const [user, setUser] = useState("");
+export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirm, setConfirm] = useState("");
 
-  const handleUser: ChangeEventHandler<HTMLInputElement> = (event) => {
-    setUser(event.target.value);
-  };
   const handleEmail: ChangeEventHandler<HTMLInputElement> = (event) => {
     setEmail(event.target.value);
   };
   const handlePassword: ChangeEventHandler<HTMLInputElement> = (event) => {
     setPassword(event.target.value);
   };
-  const handleConfirm: ChangeEventHandler<HTMLInputElement> = (event) => {
-    setConfirm(event.target.value);
-  };
+
   const onclickLogin = () => {
-    alert(`user:${user} email:${email} password:${password}`);
-    setUser("");
+    alert(` email:${email} password:${password}`);
     setEmail("");
     setPassword("");
-    setConfirm("");
   };
-  const login = (
+  const passwordReset = (
     <a href="#" className={style.login}>
-      login
+      Reset password
     </a>
   );
   return (
     <div className={style.form}>
-      <Input value={user} label="User Name" onChange={handleUser} />
       <Input value={email} label="Email" onChange={handleEmail} />
       <Input value={password} label="Password" onChange={handlePassword} />
-      <Input
-        value={confirm}
-        label="Confirm Password"
-        onChange={handleConfirm}
-      />
       <div className={style.formBtn}>
         <Button text="Login" onClick={onclickLogin} type={"primary"} />
       </div>
       <span className={style.textWrap}>
-        <TextForm text={`If you have account, you can `} />
-        {login}
+        <TextForm text={"Forgot your password? "} />
+        {passwordReset}
       </span>
     </div>
   );

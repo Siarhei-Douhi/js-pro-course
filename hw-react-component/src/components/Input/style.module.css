@@ -16,3 +16,11 @@
   letter-spacing: 0.05em;
   color: #254050;
 }
+.labelTitleDark {
+  color: white;
+}
+.inputDark {
+  background: grey;
+  border: 4px solid white;
+  color: white;
+}

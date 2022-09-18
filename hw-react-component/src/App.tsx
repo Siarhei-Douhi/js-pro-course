@@ -1,20 +1,22 @@
+import { createContext, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import { ListPost } from "./components/InstagramPost/ListPosts";
-import { RegisterForm } from "./components/RegisterForm";
-import { posts } from "./mock";
+import { RootRouter } from "./router";
+
+export const Context = createContext<{
+  isDark: boolean;
+  setIsDark: (value: boolean) => void;
+}>({ isDark: false, setIsDark: () => {} });
 
 function App() {
-  const onClickBtn1 = () => {
-    alert("great:)");
-  };
-  const onClickBtn2 = () => {
-    alert("Ok");
-  };
+  const [isDark, setIsDark] = useState(false);
+
   return (
-    <div className="App">
-      <ListPost posts={posts} />
-      <RegisterForm />
-    </div>
+    <BrowserRouter>
+      <Context.Provider value={{ isDark: isDark, setIsDark: setIsDark }}>
+        <RootRouter />
+      </Context.Provider>
+    </BrowserRouter>
   );
 }
 

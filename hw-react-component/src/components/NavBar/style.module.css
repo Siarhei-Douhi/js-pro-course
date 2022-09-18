@@ -1,9 +1,17 @@
 .navBar {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #016efc;
-  margin-bottom: 63px;
+  /* margin-bottom: 63px; */
   padding-left: 20px;
-  padding-right: 20px;
+  /* padding-right: 20px; */
+  border-radius: 25px 25px 0 0;
+}
+.navBarDark {
+  background-color: grey;
 }
 
 .mainMenu {
@@ -14,7 +22,8 @@
 
 .menu {
   display: flex;
-  padding: 58px 0 71px;
+  column-gap: 40px;
+  /* padding: 58px 0 71px; */
 }
 
 .closeButton {
@@ -30,7 +39,7 @@
 
 .menu ul {
   padding: 0;
-  margin: 80px 0 0 82px;
+  /* margin: 80px 0 0 82px; */
   list-style-type: none;
   text-align: left;
 }
@@ -46,10 +55,15 @@
   font-size: 25px;
   line-height: 29px;
   letter-spacing: 0.05em;
-  color: white;
   text-decoration: none;
 }
 
 a.activeLink {
   text-decoration: underline;
+}
+.active_link {
+  color: chartreuse;
+}
+.noActive_link {
+  color: white;
 }

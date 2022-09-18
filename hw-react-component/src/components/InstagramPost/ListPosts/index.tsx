@@ -4,23 +4,31 @@ import { ItemPost } from "../ItemPost";
 
 interface IProps {
   posts: IPost[];
+  onClickPost: (id: number) => void;
 }
 
 export const ListPost = (props: IProps) => {
   return (
     <div className={style.listPosts}>
       {props.posts.map((item) => {
+        const clickPost = () => {
+          console.log("выполняется функция clickPost");
+          // props.onClickPost === navigateToPost (AllPosts)
+          props.onClickPost(item.id);
+        };
         return (
-          <ItemPost
-            key={item.id}
-            id={item.id}
-            text={item.text}
-            author={item.author}
-            title={item.title}
-            date={item.date}
-            image={item.image}
-            lesson_num={item.lesson_num}
-          />
+          <div onClick={clickPost}>
+            <ItemPost
+              key={item.id}
+              id={item.id}
+              text={item.text}
+              author={item.author}
+              title={item.title}
+              date={item.date}
+              image={item.image}
+              lesson_num={item.lesson_num}
+            />
+          </div>
         );
       })}
     </div>

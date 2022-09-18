@@ -1,0 +1,12 @@
+.wrap {
+  padding-left: 116px;
+}
+.title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #016efc;
+}

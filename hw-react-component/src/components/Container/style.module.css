@@ -1,0 +1,14 @@
+.container {
+  width: 1440px;
+  border-radius: 25px;
+  background-image: url(../../assets/images/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -53px left 350px;
+}
+
+.darkContainer {
+  background-color: #000;
+}
+.whiteContainer {
+  background-color: #fff;
+}

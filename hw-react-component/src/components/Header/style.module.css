@@ -1,5 +1,7 @@
 .header {
   width: 100%;
+  position: relative;
+  height: 163px;
 }
 
 .menu {
