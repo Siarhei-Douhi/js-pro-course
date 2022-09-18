@@ -10,11 +10,7 @@
 .formBtn {
   margin-top: 23px;
 }
-.textWrap {
-  display: flex;
-  column-gap: 10px;
-  margin-bottom: 405px;
-}
+
 .login {
   font-weight: 700;
   font-size: 25px;

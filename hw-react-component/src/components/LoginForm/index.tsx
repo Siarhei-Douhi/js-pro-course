@@ -20,11 +20,7 @@ export const LoginForm = () => {
     setEmail("");
     setPassword("");
   };
-  const passwordReset = (
-    <a href="#" className={style.login}>
-      Reset password
-    </a>
-  );
+
   return (
     <div className={style.form}>
       <Input value={email} label="Email" onChange={handleEmail} />
@@ -32,10 +28,9 @@ export const LoginForm = () => {
       <div className={style.formBtn}>
         <Button text="Login" onClick={onclickLogin} type={"primary"} />
       </div>
-      <span className={style.textWrap}>
-        <TextForm text={"Forgot your password? "} />
-        {passwordReset}
-      </span>
+      <TextForm>
+        Forgot your password? <a href="#">Reset password</a>
+      </TextForm>
     </div>
   );
 };

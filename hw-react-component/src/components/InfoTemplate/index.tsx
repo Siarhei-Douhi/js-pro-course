@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { ReactNode, useContext } from "react";
 import { Context } from "../../App";
 import { Button } from "../Button";
 import style from "./style.module.css";
 
 interface IProps {
   title: string;
-  text: string;
+  children: ReactNode;
   textBtn: string;
   onClick: () => void;
 }
@@ -17,7 +17,7 @@ export const InfoTemplate = (props: IProps) => {
         {props.title}
       </h1>
       <p className={`${style.text} ${isDark ? style.textDark : ""}`}>
-        {props.text}
+        {props.children}
       </p>
       <Button type="primary" text={props.textBtn} onClick={props.onClick} />
     </div>

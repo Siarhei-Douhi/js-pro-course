@@ -1,6 +1,5 @@
 .container {
   box-sizing: border-box;
-  /* margin: 0 auto; */
   text-align: left;
   padding: 28px 21px 22px 24px;
   width: 341px;
@@ -24,6 +23,7 @@
   color: #4f4f4f;
 }
 .cardText {
+  height: 60px;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
@@ -31,6 +31,7 @@
   line-height: 19px;
   display: flex;
   color: #979797;
+  overflow: hidden;
 }
 .date {
   font-family: "Raleway";
@@ -39,4 +40,34 @@
   font-size: 16px;
   line-height: 19px;
   color: #016efc;
+}
+
+.containerLarge {
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 19px 37.5px 50px 23px;
+  width: 675px;
+  height: 604px;
+  background: #fdfdff;
+  border: 1px solid #ebebeb;
+}
+.imagePostLarge {
+  width: 614.2px;
+  height: 249px;
+}
+.cardTitleLarge {
+  font-family: "Alata";
+  font-weight: 400;
+  line-height: 28px;
+}
+.cardTextLarge {
+  height: 100%;
+}
+.dateLarge {
+  font-family: "Alata";
+  font-weight: 400;
+  line-height: 22px;
 }

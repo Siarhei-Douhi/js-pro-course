@@ -17,8 +17,3 @@
   letter-spacing: 0.03em;
   color: #016efc;
 }
-.textWrap {
-  display: flex;
-  column-gap: 10px;
-  margin-bottom: 370px;
-}
