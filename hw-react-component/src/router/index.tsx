@@ -14,7 +14,7 @@ export const RootRouter = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register_success" element={<RegisterSuccess />} />
       <Route path="/email_confirmed" element={<EmailConfirmed />} />
-      <Route path="/selected_post" element={<SelectedPost />} />
+      <Route path="/selected_post/:id" element={<SelectedPost />} />
     </Routes>
   );
 };
