@@ -12,8 +12,6 @@ export const ListPost = (props: IProps) => {
     <div className={style.listPosts}>
       {props.posts.map((item) => {
         const clickPost = () => {
-          console.log("выполняется функция clickPost");
-          // props.onClickPost === navigateToPost (AllPosts)
           props.onClickPost(item.id);
         };
         return (

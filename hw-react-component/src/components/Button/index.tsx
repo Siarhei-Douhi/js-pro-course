@@ -4,13 +4,10 @@ import styles from "./style.module.css";
 
 interface Props {
   text: string;
-  onClick: () => void;
-}
-interface Props {
-  text: string;
   type: "primary" | "secondary" | "secondary2";
   disabled?: boolean;
   onClick: () => void;
+  className?: string;
 }
 
 const getButtonStyle = (type: "primary" | "secondary" | "secondary2") => {
@@ -32,7 +29,7 @@ export const Button = (props: Props) => {
     <button
       className={`${styles.button} ${getButtonStyle(props.type)} ${
         isDark ? styles.buttonDark : ""
-      }`}
+      } ${props.className}`}
       onClick={props.onClick}
       disabled={props.disabled}
     >

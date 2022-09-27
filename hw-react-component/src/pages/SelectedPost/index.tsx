@@ -8,9 +8,7 @@ import { IPost } from "../../types/post";
 import style from "./style.module.css";
 
 export const SelectedPost = () => {
-  // const objMock = posts[1];
   const param = useParams();
-  // console.log(param);
 
   const [post, setPost] = useState<IPost | null>(null);
 

@@ -6,7 +6,7 @@ import styles from "./style.module.css";
 
 export const Registration = () => {
   return (
-    <Container>
+    <Container className={styles.container}>
       <Header />
       <div className={styles.wrapperLink}>
         <NavLink

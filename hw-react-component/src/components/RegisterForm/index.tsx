@@ -29,11 +29,7 @@ export const RegisterForm = () => {
     setPassword("");
     setConfirm("");
   };
-  const login = (
-    <a href="#" className={style.login}>
-      login
-    </a>
-  );
+
   return (
     <div className={style.form}>
       <Input value={user} label="User Name" onChange={handleUser} />
@@ -47,10 +43,9 @@ export const RegisterForm = () => {
       <div className={style.formBtn}>
         <Button text="Login" onClick={onclickLogin} type={"primary"} />
       </div>
-      <span className={style.textWrap}>
-        <TextForm text={`If you have account, you can `} />
-        {login}
-      </span>
+      <TextForm>
+        If you have account, you can <a href="#">login</a>
+      </TextForm>
     </div>
   );
 };

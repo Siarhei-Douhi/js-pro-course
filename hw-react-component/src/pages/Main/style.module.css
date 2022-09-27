@@ -1,3 +1,7 @@
+.container {
+  height: 100%;
+}
 .wrap {
-  padding-left: 114px;
+  width: 1112px;
+  margin-left: 114px;
 }
