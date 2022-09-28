@@ -4,9 +4,19 @@ import { Context } from "../../App";
 
 interface Input {
   label?: string;
-  value: string;
+  value?: string;
   placeholder?: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  refObj?: any;
+  error?: string;
+  name?: string;
+  required?: boolean;
+  pattern?: string;
+  type?: string;
+  minLength?: number;
+  maxLength?: number;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onFocus?: () => void;
+  onBlur?: () => void;
 }
 export const Input = (props: Input) => {
   const { isDark } = useContext(Context);
@@ -22,11 +32,23 @@ export const Input = (props: Input) => {
         </p>
       ) : null}
       <input
-        className={`${styles.input} ${isDark ? styles.inputDark : ""}`}
+        className={`${styles.input} ${isDark ? styles.inputDark : ""} ${
+          props.error ? styles.error : ""
+        }`}
         value={props.value}
         placeholder={props.placeholder}
         onChange={props.onChange}
+        ref={props.refObj}
+        onFocus={props.onFocus}
+        onBlur={props.onBlur}
+        required={props.required}
+        name={props.name}
+        pattern={props.pattern}
+        type={props.type}
+        minLength={props.minLength}
+        maxLength={props.maxLength}
       ></input>
+      <p style={{ color: "red" }}>{props.error}</p>
     </label>
   );
 };

@@ -1,14 +1,12 @@
 .container {
   width: 250px;
   height: 90px;
-  background-color: rgb(44, 10, 214);
   display: flex;
   align-items: center;
   justify-content: center;
   column-gap: 10px;
   font-size: 25px;
-  color: white;
-  margin: 0 auto 20px;
+  color: #016efc;
 }
 .containerDark {
   background-color: black;

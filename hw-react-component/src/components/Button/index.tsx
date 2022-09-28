@@ -8,6 +8,7 @@ interface Props {
   disabled?: boolean;
   onClick: () => void;
   className?: string;
+  btnType?: "button" | "submit" | "reset" | undefined;
 }
 
 const getButtonStyle = (type: "primary" | "secondary" | "secondary2") => {
@@ -32,6 +33,7 @@ export const Button = (props: Props) => {
       } ${props.className}`}
       onClick={props.onClick}
       disabled={props.disabled}
+      type={props.btnType}
     >
       {props.text}
     </button>

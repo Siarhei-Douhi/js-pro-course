@@ -23,13 +23,15 @@
   background-color: gray;
   color: black;
 }
-.secondary2 {
-  background-color: transparent;
-  color: red;
-}
 .buttonDark {
   background-color: rgb(139, 133, 133);
   border: 4px solid rgb(78, 76, 76);
   border-radius: 200px;
   color: #ffffff;
+}
+.secondary2 {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  width: 170px;
 }

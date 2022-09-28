@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Container } from "../../components/Container";
 import { Header } from "../../components/Header";
 import { RegisterForm } from "../../components/RegisterForm";
+import { TextForm } from "../../components/TextForm";
 import styles from "./style.module.css";
 
 export const Registration = () => {
@@ -28,6 +29,12 @@ export const Registration = () => {
         </NavLink>
       </div>
       <RegisterForm />
+      <TextForm>
+        If you have account, you can{" "}
+        <Link to="/login" style={{ color: "#016efc" }}>
+          login
+        </Link>
+      </TextForm>
     </Container>
   );
 };
