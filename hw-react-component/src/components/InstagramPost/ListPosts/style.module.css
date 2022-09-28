@@ -6,3 +6,6 @@
   column-gap: 41px;
   row-gap: 29px;
 }
+.itemPostWrapper {
+  cursor: zoom-in;
+}

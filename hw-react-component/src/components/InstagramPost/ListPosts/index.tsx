@@ -15,7 +15,7 @@ export const ListPost = (props: IProps) => {
           props.onClickPost(item.id);
         };
         return (
-          <div onClick={clickPost}>
+          <div onClick={clickPost} className={style.itemPostWrapper}>
             <ItemPost
               key={item.id}
               id={item.id}

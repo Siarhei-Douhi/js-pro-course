@@ -15,3 +15,11 @@
 .menuButton {
   cursor: pointer;
 }
+.closeNavBar {
+  opacity: 0;
+  transition: 1s ease;
+}
+.buttonWrap {
+  display: flex;
+  align-items: center;
+}
